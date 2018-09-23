@@ -25,10 +25,23 @@ public class MainActivity extends AppCompatActivity {
                 switchTask1(view);
             }
         });
+
+        btnTask_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchTask2(view);
+            }
+        });
     }
 
     private void switchTask1(View view) {
         Intent intent = new Intent(this, Task1Activity.class);
+        startActivity(intent);
+
+    }
+
+    private void switchTask2(View view) {
+        Intent intent = new Intent(this, Task2Activity.class);
         startActivity(intent);
 
     }
